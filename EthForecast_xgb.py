@@ -1,18 +1,29 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
+# from streamlit_gsheets import GSheetsConnection
+# import matplotlib.pyplot as plt
+# import plotly.express as px
+# import plotly.graph_objects as go
+from PIL import Image
+import requests
+from io import BytesIO
+import joblib
+import os
+import requests
 import xgboost as xgb
-# from xgboost import XGBRegressor
-# from sklearn.preprocessing import MinMaxScaler, StandardScaler
-# from sklearn.metrics import mean_squared_error, mean_absolute_error
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from datetime import datetime
 
+
 #Loading up the regressor model we created
-XGB_tuned = xgb.XGBRegressor()
-XGB_tuned.load_model('eth_xgb_model1.json')
+# model = GradientBoostingRegressor()
+# model = RandomForestRegressor()
+# model = LinearRegression()
+model = xgb.XGBRegressor()
+model.load_model('eth_xgb_model1.json')
 
 
 #Caching the model for faster loading
@@ -30,7 +41,7 @@ def make_predictions(data):
 
     X_test = data[features].iloc[-1:]
     
-    predictions = load_model.predict(X_test)
+    predictions = model.predict(X_test)
 
     return predictions
 
