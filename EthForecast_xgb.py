@@ -32,7 +32,7 @@ def make_predictions(data):
 
 #=== writing the Predictor App
 st.title('Ethereum Close Price Dashboard')
-# st.image("""https://th.bing.com/th/id/R.59ab41db4afa6cce16b4a707ee6bbbb9?rik=UwFPzZOK0Vp0%2fA&pid=ImgRaw&r=0""")
+st.image("""https://th.bing.com/th/id/R.59ab41db4afa6cce16b4a707ee6bbbb9?rik=UwFPzZOK0Vp0%2fA&pid=ImgRaw&r=0""")
 st.header('Upload your dataset to predict the Ethereum close price:')
 
 # File uploader for the user to upload a CSV file
