@@ -1,13 +1,14 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-from xgboost import XGBRegressor
+import xgboost as xgb
+# from xgboost import XGBRegressor
 # from sklearn.preprocessing import MinMaxScaler, StandardScaler
 # from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 
 #Loading up the regressor model we created
-XGB_tuned = XGBRegressor()
+XGB_tuned = xgb.XGBRegressor()
 XGB_tuned.load_model('eth_xgb_model1.json')
 
 
