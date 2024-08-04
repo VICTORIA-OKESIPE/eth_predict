@@ -5,7 +5,10 @@ import xgboost as xgb
 # from xgboost import XGBRegressor
 # from sklearn.preprocessing import MinMaxScaler, StandardScaler
 # from sklearn.metrics import mean_squared_error, mean_absolute_error
-
+from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from datetime import datetime
 
 #Loading up the regressor model we created
 XGB_tuned = xgb.XGBRegressor()
