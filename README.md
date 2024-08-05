@@ -3,4 +3,4 @@
 This is a Streamlit App for predicting Ethereum close price.
 
 
-jjjgggh
+jjjgg
